@@ -1,0 +1,65 @@
+{
+  "nav": {
+    "about": "Giới thiệu",
+    "skills": "Kỹ năng",
+    "projects": "Dự án",
+    "experience": "Kinh nghiệm",
+    "github": "GitHub",
+    "contact": "Liên hệ"
+  },
+  "hero": {
+    "greeting": "Xin chào, tôi là",
+    "cta_projects": "Xem dự án",
+    "cta_contact": "Liên hệ tôi",
+    "scroll_hint": "Cuộn xuống để khám phá"
+  },
+  "about": {
+    "title": "Giới thiệu",
+    "subtitle": "Một chút về tôi"
+  },
+  "skills": {
+    "title": "Kỹ năng",
+    "subtitle": "Công nghệ tôi sử dụng"
+  },
+  "projects": {
+    "title": "Dự án",
+    "subtitle": "Những gì tôi đã xây dựng",
+    "view_demo": "Xem demo",
+    "view_code": "Mã nguồn",
+    "no_projects": "Chưa có dự án nào. Hãy quay lại sau!"
+  },
+  "experience": {
+    "title": "Kinh nghiệm",
+    "subtitle": "Hành trình của tôi"
+  },
+  "github": {
+    "title": "GitHub",
+    "subtitle": "Hoạt động mã nguồn mở",
+    "repos": "Repositories",
+    "followers": "Followers",
+    "following": "Following",
+    "stars": "Stars",
+    "forks": "Forks",
+    "view_github": "Xem trang GitHub",
+    "rate_limited": "Đang bị giới hạn bởi GitHub API. Vui lòng thử lại sau."
+  },
+  "contact": {
+    "title": "Liên hệ",
+    "subtitle": "Hãy kết nối với tôi",
+    "name": "Họ và tên",
+    "email": "Email",
+    "message": "Tin nhắn",
+    "send": "Gửi tin nhắn",
+    "sending": "Đang gửi...",
+    "success": "Tin nhắn đã được gửi thành công!",
+    "error": "Có lỗi xảy ra. Vui lòng thử lại.",
+    "name_required": "Vui lòng nhập họ tên",
+    "email_required": "Vui lòng nhập email",
+    "email_invalid": "Email không hợp lệ",
+    "message_required": "Vui lòng nhập tin nhắn"
+  },
+  "footer": {
+    "built_with": "Được xây dựng với",
+    "rights": "Tất cả quyền được bảo lưu"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "github": "GitHub",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "cta_projects": "View Projects",
+    "cta_contact": "Contact Me",
+    "scroll_hint": "Scroll down to explore"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "A little about myself"
+  },
+  "skills": {
+    "title": "Skills",
+    "subtitle": "Technologies I work with"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "What I've built",
+    "view_demo": "Live Demo",
+    "view_code": "Source Code",
+    "no_projects": "No projects yet. Check back soon!"
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "My journey"
+  },
+  "github": {
+    "title": "GitHub",
+    "subtitle": "Open source activity",
+    "repos": "Repositories",
+    "followers": "Followers",
+    "following": "Following",
+    "stars": "Stars",
+    "forks": "Forks",
+    "view_github": "View GitHub Profile",
+    "rate_limited": "GitHub API rate limited. Please try again later."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's connect",
+    "name": "Full Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Something went wrong. Please try again.",
+    "name_required": "Name is required",
+    "email_required": "Email is required",
+    "email_invalid": "Invalid email address",
+    "message_required": "Message is required"
+  },
+  "footer": {
+    "built_with": "Built with",
+    "rights": "All rights reserved"
+  }
+}
