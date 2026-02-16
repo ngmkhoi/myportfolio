@@ -9,9 +9,9 @@ import { profile } from '../../data/profile'
 import SectionWrapper from '../SectionWrapper'
 import GlassCard from '../GlassCard'
 
-const EMAILJS_SERVICE_ID = 'myportfolio'
-const EMAILJS_TEMPLATE_ID = 'template_3bslb6u'
-const EMAILJS_PUBLIC_KEY = 'vxH_j1feVE2l_Nfaa'
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
 export default function ContactSection() {
   const { t } = useTranslation()
