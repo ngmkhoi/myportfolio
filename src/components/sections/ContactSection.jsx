@@ -3,10 +3,15 @@ import { useTranslation } from 'react-i18next'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
+import emailjs from '@emailjs/browser'
 import { Send, CheckCircle, AlertCircle, Github, Linkedin, Mail as MailIcon } from 'lucide-react'
 import { profile } from '../../data/profile'
 import SectionWrapper from '../SectionWrapper'
 import GlassCard from '../GlassCard'
+
+const EMAILJS_SERVICE_ID = 'myportfolio'
+const EMAILJS_TEMPLATE_ID = 'template_3bslb6u'
+const EMAILJS_PUBLIC_KEY = 'vxH_j1feVE2l_Nfaa'
 
 export default function ContactSection() {
   const { t } = useTranslation()
@@ -23,17 +28,21 @@ export default function ContactSection() {
     resolver: yupResolver(schema),
   })
 
-  const onSubmit = async (_data) => {
+  const onSubmit = async (data) => {
     setSubmitting(true)
     setStatus(null)
 
     try {
-      // TODO: Integrate with EmailJS
-      // import emailjs from '@emailjs/browser'
-      // await emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', data, 'YOUR_PUBLIC_KEY')
-
-      // Simulate send for now
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          name: data.name,
+          email: data.email,
+          message: data.message,
+        },
+        EMAILJS_PUBLIC_KEY,
+      )
       setStatus('success')
       reset()
     } catch {
