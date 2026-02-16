@@ -23,8 +23,8 @@ export const profile = {
     ],
   },
   tagline: {
-    vi: 'Xây dựng ứng dụng web hiện đại với JavaScript',
-    en: 'Building modern web applications with JavaScript',
+    vi: 'Từ con số 0 đến sản phẩm hoàn thiện: Không chỉ là code, đó là một trải nghiệm.',
+    en: "From zero to product: Crafting experiences, not just code.",
   },
   bio: {
     vi: 'Fresher Fullstack Developer đam mê công nghệ web. Tôi thích xây dựng các ứng dụng web hoàn chỉnh từ frontend đến backend, luôn học hỏi và cải thiện kỹ năng mỗi ngày.',
