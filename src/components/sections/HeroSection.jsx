@@ -2,11 +2,15 @@ import { useTranslation } from 'react-i18next'
 import { ArrowDown, FolderOpen, Mail } from 'lucide-react'
 import { profile } from '../../data/profile'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
+import { useTypingEffect } from '../../hooks/useTypingEffect'
 
 export default function HeroSection() {
   const { t, i18n } = useTranslation()
   const lang = i18n.language
   const { ref, isVisible } = useScrollReveal({ threshold: 0.05 })
+  
+  // Typing animation for role
+  const typedText = useTypingEffect(profile.typingRoles[lang] || profile.typingRoles.en, 100, 50, 1500)
 
   return (
     <section
@@ -41,9 +45,9 @@ export default function HeroSection() {
           <span className="text-[var(--color-text-primary)]">{profile.name}</span>
         </h1>
 
-        {/* Role with typing cursor */}
+        {/* Role with typing animation */}
         <div className={`flex items-center justify-center gap-2 text-2xl sm:text-3xl md:text-4xl font-bold mb-6 reveal ${isVisible ? 'revealed' : ''} reveal-delay-2`}>
-          <span className="text-[var(--color-accent)]">{profile.role[lang]}</span>
+          <span className="text-[var(--color-accent)] min-h-[1.2em]">{typedText}</span>
           <span className="text-[var(--color-accent)] animate-cursor">|</span>
         </div>
 

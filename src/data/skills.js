@@ -25,7 +25,6 @@ export const skillCategories = [
       { name: 'Node.js', proficiency: 4, icon: 'Server' },
       { name: 'Express.js', proficiency: 4, icon: 'Route' },
       { name: 'REST API', proficiency: 4, icon: 'Plug' },
-      { name: 'GraphQL', proficiency: 2, icon: 'Plug' },
     ],
   },
   {

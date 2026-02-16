@@ -4,6 +4,24 @@ export const profile = {
     vi: 'Fullstack Developer',
     en: 'Fullstack Developer',
   },
+  typingRoles: {
+    vi: [
+      'Fullstack Developer',
+      'Web Developer',
+      'Software Engineer',
+      'Frontend Developer',
+      'Backend Developer',
+      'Tech Enthusiast',
+    ],
+    en: [
+      'Fullstack Developer',
+      'Web Developer',
+      'Software Engineer',
+      'Frontend Developer',
+      'Backend Developer',
+      'Tech Enthusiast',
+    ],
+  },
   tagline: {
     vi: 'Xây dựng ứng dụng web hiện đại với JavaScript',
     en: 'Building modern web applications with JavaScript',
