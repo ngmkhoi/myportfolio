@@ -1,19 +1,12 @@
-import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ExternalLink, Github, FolderOpen } from 'lucide-react'
-import { projects, projectCategories } from '../../data/projects'
+import { projects } from '../../data/projects'
 import SectionWrapper from '../SectionWrapper'
 import GlassCard from '../GlassCard'
 
 export default function ProjectsSection() {
   const { t, i18n } = useTranslation()
   const lang = i18n.language
-  const [activeFilter, setActiveFilter] = useState('all')
-
-  const filteredProjects =
-    activeFilter === 'all'
-      ? projects
-      : projects.filter((p) => p.category === activeFilter)
 
   return (
     <SectionWrapper
@@ -21,32 +14,15 @@ export default function ProjectsSection() {
       title={t('projects.title')}
       subtitle={t('projects.subtitle')}
     >
-      {/* Filter Pills */}
-      <div className="flex flex-wrap justify-center gap-3 mb-12">
-        {projectCategories.map((cat) => (
-          <button
-            key={cat.id}
-            onClick={() => setActiveFilter(cat.id)}
-            className={`px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-250 cursor-pointer ${
-              activeFilter === cat.id
-                ? 'bg-[var(--color-accent)] text-[var(--color-bg-primary)] shadow-lg shadow-[var(--color-accent-glow)]'
-                : 'glass-card text-[var(--color-text-muted)] hover:text-[var(--color-text-primary)]'
-            }`}
-          >
-            {cat.label[lang]}
-          </button>
-        ))}
-      </div>
-
       {/* Projects Grid */}
-      {filteredProjects.length === 0 ? (
+      {projects.length === 0 ? (
         <div className="text-center py-16">
           <FolderOpen size={48} className="mx-auto mb-4 text-[var(--color-text-muted)]" />
           <p className="text-[var(--color-text-muted)] text-lg">{t('projects.no_projects')}</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredProjects.map((project) => (
+          {projects.map((project) => (
             <GlassCard key={project.id} className="flex flex-col group">
               {/* Project Image/Placeholder */}
               <div className="w-full h-48 rounded-lg bg-[var(--color-bg-secondary)] mb-5 overflow-hidden flex items-center justify-center border border-[var(--color-border)]">
