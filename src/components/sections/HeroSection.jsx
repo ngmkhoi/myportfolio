@@ -4,7 +4,7 @@ import { profile } from '../../data/profile'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
 import { useTypingEffect } from '../../hooks/useTypingEffect'
 import LetterGlitch from '../LetterGlitch'
-import ShinyText from '../ShinyText.jsx'
+import ShinyText from '@/components/ShinyText'
 
 export default function HeroSection() {
   const { t, i18n } = useTranslation()
@@ -52,7 +52,15 @@ export default function HeroSection() {
 
         {/* Name */}
         <h1 className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-tight mb-4 reveal ${isVisible ? 'revealed' : ''} reveal-delay-1`}>
-          <span className="text-[var(--color-text-primary)]">{profile.name}</span>
+          <ShinyText 
+            text={profile.name}
+            disabled={false}
+            speed={3}
+            className="text-[var(--color-text-primary)]"
+            color="currentColor"
+            shineColor="#ffffff"
+            spread={120}
+          />
         </h1>
 
         {/* Role with typing animation */}
