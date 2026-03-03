@@ -4,7 +4,7 @@ import { profile } from '../../data/profile'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
 import { useTypingEffect } from '../../hooks/useTypingEffect'
 import LetterGlitch from '../LetterGlitch'
-import ShinyText from '../ShinyText'
+import ShinyText from '../ShinyText.jsx'
 
 export default function HeroSection() {
   const { t, i18n } = useTranslation()
