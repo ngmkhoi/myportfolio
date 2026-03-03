@@ -54,9 +54,9 @@ export default function HeroSection() {
         <h1 className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-tight mb-4 reveal ${isVisible ? 'revealed' : ''} reveal-delay-1`}>
           <ShinyText 
             text={profile.name} 
-            speed={3} 
-            color="var(--color-text-primary)" 
-            shineColor="#ffffff" 
+            speed={2} 
+            color="var(--color-text-secondary)" 
+            shineColor="var(--color-accent)" 
             className="inline-block"
           />
         </h1>
