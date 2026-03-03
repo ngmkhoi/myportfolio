@@ -4,6 +4,7 @@ import { profile } from '../../data/profile'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
 import { useTypingEffect } from '../../hooks/useTypingEffect'
 import LetterGlitch from '../LetterGlitch'
+import ShinyText from '../ShinyText'
 
 export default function HeroSection() {
   const { t, i18n } = useTranslation()
@@ -61,8 +62,16 @@ export default function HeroSection() {
         </div>
 
         {/* Tagline */}
-        <p className={`text-lg md:text-xl text-[var(--color-text-secondary)] max-w-2xl mx-auto mb-10 reveal ${isVisible ? 'revealed' : ''} reveal-delay-3`}>
-          {profile.tagline[lang]}
+        <p className={`text-lg md:text-xl max-w-2xl mx-auto mb-10 reveal ${isVisible ? 'revealed' : ''} reveal-delay-3`}>
+          <ShinyText 
+            text={profile.tagline[lang]} 
+            disabled={false} 
+            speed={3} 
+            className="text-[var(--color-text-secondary)]"
+            color="currentColor" 
+            shineColor="#ffffff" 
+            spread={120}
+          />
         </p>
 
         {/* CTA Buttons */}
