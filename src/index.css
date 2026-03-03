@@ -1,14 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
-
-@custom-variant dark (&:is(.dark *));
-
-/* ========================================
-   DESIGN SYSTEM — Khoi Portfolio
-   Dark + Glassmorphism + Green Accent
-   ======================================== */
 
 @theme {
   --font-heading: "Archivo", system-ui, sans-serif;
