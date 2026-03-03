@@ -4,7 +4,7 @@ import { profile } from '../../data/profile'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
 import { useTypingEffect } from '../../hooks/useTypingEffect'
 import LetterGlitch from '../LetterGlitch'
-import ShinyText from '@/components/ShinyText'
+import ShinyText from '../ShinyText'
 
 export default function HeroSection() {
   const { t, i18n } = useTranslation()
@@ -50,16 +50,14 @@ export default function HeroSection() {
           {t('hero.greeting')}
         </p>
 
-        {/* Name */}
+        {/* Name with ShinyText */}
         <h1 className={`text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold leading-tight mb-4 reveal ${isVisible ? 'revealed' : ''} reveal-delay-1`}>
           <ShinyText 
-            text={profile.name}
-            disabled={false}
-            speed={3}
-            className="text-[var(--color-text-primary)]"
-            color="currentColor"
-            shineColor="#ffffff"
-            spread={120}
+            text={profile.name} 
+            speed={3} 
+            color="var(--color-text-primary)" 
+            shineColor="#ffffff" 
+            className="inline-block"
           />
         </h1>
 
@@ -69,16 +67,15 @@ export default function HeroSection() {
           <span className="text-[var(--color-accent)] animate-cursor">|</span>
         </div>
 
-        {/* Tagline */}
+        {/* Slogan (Tagline) with ShinyText */}
         <p className={`text-lg md:text-xl max-w-2xl mx-auto mb-10 reveal ${isVisible ? 'revealed' : ''} reveal-delay-3`}>
           <ShinyText 
             text={profile.tagline[lang]} 
-            disabled={false} 
-            speed={3} 
-            className="text-[var(--color-text-secondary)]"
-            color="currentColor" 
-            shineColor="#ffffff" 
-            spread={120}
+            speed={5} 
+            color="var(--color-text-secondary)" 
+            shineColor="var(--color-accent)" 
+            spread={90}
+            className="inline-block"
           />
         </p>
 
