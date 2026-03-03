@@ -20,7 +20,8 @@ const langColors = {
   PHP: '#4F5D95',
 }
 
-function StatCard({ icon: Icon, label, value }) {
+function StatCard({ icon, label, value }) {
+  const Icon = icon
   return (
     <div className="flex flex-col items-center gap-1 px-4 py-3">
       <Icon size={18} className="text-[var(--color-accent)]" />

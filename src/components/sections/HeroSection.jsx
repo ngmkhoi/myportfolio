@@ -3,6 +3,7 @@ import { ArrowDown, FolderOpen, Mail } from 'lucide-react'
 import { profile } from '../../data/profile'
 import { useScrollReveal } from '../../hooks/useScrollReveal'
 import { useTypingEffect } from '../../hooks/useTypingEffect'
+import LetterGlitch from '../LetterGlitch'
 
 export default function HeroSection() {
   const { t, i18n } = useTranslation()
@@ -17,12 +18,20 @@ export default function HeroSection() {
       ref={ref}
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Animated background blobs */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-[var(--color-accent)] rounded-full opacity-[0.07] blur-[100px] animate-pulse-glow" />
-        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-blue-500 rounded-full opacity-[0.05] blur-[120px] animate-pulse-glow" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-purple-500 rounded-full opacity-[0.04] blur-[100px] animate-pulse-glow" style={{ animationDelay: '2s' }} />
+      {/* LetterGlitch canvas background */}
+      <div className="absolute inset-0 pointer-events-none" style={{ opacity: 0.3 }}>
+        <LetterGlitch
+          glitchColors={['#0f2e1c', '#22c55e', '#16a34a']}
+          glitchSpeed={60}
+          outerVignette={true}
+          centerVignette={false}
+          smooth={true}
+        />
       </div>
+
+      {/* Subtle gradient overlay to keep text readable */}
+      <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-[var(--color-bg-primary)]/30 via-transparent to-[var(--color-bg-primary)]/60" />
+
 
       {/* Grid overlay */}
       <div

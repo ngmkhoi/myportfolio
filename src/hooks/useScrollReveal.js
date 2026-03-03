@@ -11,15 +11,14 @@ import { useEffect, useRef, useState } from 'react'
  */
 export function useScrollReveal({ threshold = 0.1, rootMargin = '0px 0px -50px 0px' } = {}) {
   const ref = useRef(null)
-  const [isVisible, setIsVisible] = useState(false)
+  // Lazy initializer: read media query once at mount to avoid setState inside effect
+  const [isVisible, setIsVisible] = useState(
+    () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  )
 
   useEffect(() => {
-    // Respect reduced motion preference
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (prefersReducedMotion) {
-      setIsVisible(true)
-      return
-    }
+    // If already visible (reduced motion), no need to set up the observer
+    if (isVisible) return
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -37,7 +36,7 @@ export function useScrollReveal({ threshold = 0.1, rootMargin = '0px 0px -50px 0
     return () => {
       if (el) observer.unobserve(el)
     }
-  }, [threshold, rootMargin])
+  }, [isVisible, threshold, rootMargin])
 
   return { ref, isVisible }
 }
